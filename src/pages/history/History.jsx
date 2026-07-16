@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./History.css";
 
 import Navbar from "../../components/navbar/Navbar";
@@ -16,7 +16,7 @@ function History(){
 
     const [loading,setLoading]=useState(true);
 
-    const loadHistory=async()=>{
+const loadHistory = useCallback(async () => {
 
         if(!user?.email){
 
@@ -58,13 +58,13 @@ function History(){
 
         }
 
-    };
+    }, [user]);
 
-    useEffect(()=>{
+   useEffect(() => {
 
-        loadHistory();
+    loadHistory();
 
-    },[user]);
+}, [loadHistory]);
 
     return(
 
