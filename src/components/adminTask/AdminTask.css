@@ -1,0 +1,406 @@
+/* ==========================
+   PAGE
+========================== */
+
+.admin-task-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#fff8f1,#ffedd5,#ffffff);
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+.admin-task-layout{
+    padding-top:98px;
+}
+
+.admin-task-content{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    min-height:calc(100vh - 98px);
+    padding:30px;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.admin-task-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.admin-task-header h1{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:0;
+    font-size:42px;
+    font-weight:700;
+    color:#ea580c;
+}
+
+.admin-task-header p{
+    margin-top:10px;
+    color:#6b7280;
+    font-size:17px;
+}
+
+/* ==========================
+   REFRESH BUTTON
+========================== */
+
+.admin-task-refresh-btn{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 24px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#f97316,#ea580c);
+
+    color:#fff;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.admin-task-refresh-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(249,115,22,.25);
+
+}
+
+/* ==========================
+   TABLE CARD
+========================== */
+
+.admin-task-table-cards{
+
+    width:100%;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:20px;
+
+    border:1px solid #fed7aa;
+
+    box-shadow:0 15px 35px rgba(249,115,22,.15);
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+.admin-task-table-cards::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.admin-task-table-cards::-webkit-scrollbar-track{
+
+    background:#ffedd5;
+
+    border-radius:20px;
+
+}
+
+.admin-task-table-cards::-webkit-scrollbar-thumb{
+
+    background:#fb923c;
+
+    border-radius:20px;
+
+}
+
+.admin-task-table-cards::-webkit-scrollbar-thumb:hover{
+
+    background:#ea580c;
+
+}
+
+/* ==========================================
+   LARGE DESKTOP (1440px+)
+========================================== */
+
+@media (min-width:1440px){
+
+.admin-task-content{
+
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:40px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:46px;
+
+}
+
+}
+
+
+/* ==========================================
+   DESKTOP / LAPTOP (1200px-1439px)
+========================================== */
+
+@media (max-width:1439px){
+
+.admin-task-content{
+
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:30px;
+
+}
+
+}
+
+
+/* ==========================================
+   SMALL LAPTOP (992px-1199px)
+========================================== */
+
+@media (max-width:1199px){
+
+.admin-task-content{
+
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:25px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:36px;
+
+}
+
+}
+
+
+/* ==========================================
+   TABLET & MOBILE
+   (Sidebar opens with hamburger)
+========================================== */
+
+@media (max-width:991px){
+
+.admin-task-layout{
+
+    padding-top:98px;
+
+}
+
+.admin-task-content{
+
+    margin-left:0;
+    width:100%;
+    padding:20px;
+
+}
+
+.admin-task-header{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:30px;
+
+}
+
+.admin-task-header p{
+
+    font-size:15px;
+
+}
+
+.admin-task-refresh-btn{
+
+    width:100%;
+    justify-content:center;
+
+}
+
+.admin-task-table-cards{
+
+    padding:18px;
+
+}
+
+}
+
+
+/* ==========================================
+   LARGE MOBILE
+========================================== */
+
+@media (max-width:767px){
+
+.admin-task-page{
+    margin-top: 50px;
+}
+
+.admin-task-content{
+
+    padding:15px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:26px;
+
+}
+
+.admin-task-header p{
+
+    font-size:14px;
+
+}
+
+.admin-task-refresh-btn{
+
+    padding:13px;
+
+}
+
+.admin-task-table-cards{
+
+    padding:15px;
+
+}
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:575px){
+
+.admin-task-layout{
+
+    padding-top:140px;
+
+}
+
+.admin-task-content{
+
+    padding:12px;
+
+}
+
+.admin-task-header{
+
+    gap:12px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:22px;
+
+}
+
+.admin-task-header p{
+
+    font-size:13px;
+
+}
+
+.admin-task-refresh-btn{
+
+    font-size:14px;
+    padding:12px;
+
+}
+
+.admin-task-table-cards{
+
+    padding:12px;
+    border-radius:16px;
+
+}
+
+}
+
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width:400px){
+
+.admin-task-layout{
+
+    padding-top:150px;
+
+}
+
+.admin-task-content{
+
+    padding:10px;
+
+}
+
+.admin-task-header h1{
+
+    font-size:20px;
+
+}
+
+.admin-task-header p{
+
+    font-size:12px;
+
+}
+
+.admin-task-refresh-btn{
+
+    font-size:13px;
+    padding:11px;
+
+}
+
+.admin-task-table-cards{
+
+    padding:10px;
+
+}
+
+}

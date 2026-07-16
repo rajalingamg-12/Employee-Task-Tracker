@@ -1,0 +1,220 @@
+.table-container{
+    width:100%;
+    background:#ffffff;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(249,115,22,.12);
+    overflow-x:auto;
+    border:1px solid #fed7aa;
+}
+
+.task-table{
+    width:100%;
+    min-width:1200px;
+    border-collapse:collapse;
+}
+
+.task-table thead{
+    background:linear-gradient(135deg,#f97316,#fb923c);
+}
+
+.task-table th{
+    padding:16px;
+    text-align:left;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:600;
+    border-bottom:none;
+    white-space:nowrap;
+}
+
+.task-table td{
+    padding:15px;
+    color:#44403c;
+    font-size:14px;
+    border-bottom:1px solid #fed7aa;
+    vertical-align:middle;
+}
+
+.task-table tbody tr{
+    transition:.3s;
+}
+
+.task-table tbody tr:nth-child(even){
+    background:#fffaf5;
+}
+
+.task-table tbody tr:hover{
+    background:#ffedd5;
+}
+
+.description{
+    min-width:250px;
+    max-width:320px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+/* ===========================
+   Priority Badge
+=========================== */
+
+.priority,
+.status{
+    display:inline-block;
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.priority.high{
+    background:#fecaca;
+    color:#b91c1c;
+}
+
+.priority.medium{
+    background:#fde68a;
+    color:#b45309;
+}
+
+.priority.low{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* ===========================
+   Status Badge
+=========================== */
+
+.status.completed{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.status.pending{
+    background:#ffedd5;
+    color:#ea580c;
+}
+
+.status.inprogress{
+    background:#fed7aa;
+    color:#c2410c;
+}
+
+.task-table input{
+    width:180px;
+    padding:10px 12px;
+    border:1px solid #fdba74;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+    background:#fff7ed;
+    transition:.3s;
+}
+
+.task-table input:focus{
+    border-color:#f97316;
+    background:#ffffff;
+    box-shadow:0 0 0 4px rgba(249,115,22,.15);
+}
+
+.task-table input::placeholder{
+    color:#a8a29e;
+}
+
+/* ===========================
+   Save Button
+=========================== */
+
+.save-btn{
+    border:none;
+    background:linear-gradient(135deg,#f97316,#ea580c);
+    color:#ffffff;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 6px 18px rgba(249,115,22,.25);
+}
+
+.save-btn:hover:not(:disabled){
+    transform:translateY(-2px);
+    background:linear-gradient(135deg,#ea580c,#c2410c);
+    box-shadow:0 10px 25px rgba(249,115,22,.35);
+}
+
+.save-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+.empty{
+    text-align:center;
+    padding:50px;
+    color:#9a3412;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* Scrollbar */
+
+.table-container::-webkit-scrollbar{
+    height:8px;
+}
+
+.table-container::-webkit-scrollbar-track{
+    background:#ffedd5;
+    border-radius:10px;
+}
+
+.table-container::-webkit-scrollbar-thumb{
+    background:#fb923c;
+    border-radius:10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover{
+    background:#ea580c;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.table-container{
+    padding:15px;
+}
+
+.task-table{
+    min-width:1100px;
+}
+
+}
+
+@media(max-width:768px){
+
+.task-table{
+    min-width:1000px;
+}
+
+.task-table th,
+.task-table td{
+    padding:12px;
+    font-size:13px;
+}
+
+.task-table input{
+    width:150px;
+}
+
+.save-btn{
+    padding:8px 14px;
+    font-size:13px;
+}
+
+}

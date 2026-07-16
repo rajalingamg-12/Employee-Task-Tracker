@@ -1,0 +1,850 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+
+}
+
+/* ==========================
+   PAGE BACKGROUND
+========================== */
+
+.home-dashboard-page{
+
+    min-height:100vh;
+    background:linear-gradient(135deg,#fff8ec,#fdf2dc,#ffffff);
+    position:relative;
+    overflow:hidden;
+
+}
+
+.home-dashboard-page::before{
+
+    content:"";
+    position:absolute;
+    top:-180px;
+    left:-180px;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(209,156,49,.08);
+    filter:blur(40px);
+
+}
+
+.home-dashboard-page::after{
+
+    content:"";
+    position:absolute;
+    right:-180px;
+    bottom:-180px;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(235,129,37,.08);
+    filter:blur(40px);
+
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.home-dashboard-container{
+
+    position:relative;
+    z-index:2;
+    max-width:1300px;
+    margin:auto;
+    padding:150px 30px 60px;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.home-dashboard-header{
+
+    text-align:center;
+    margin-bottom:55px;
+
+}
+
+.home-dashboard-header h1{
+
+    font-size:42px;
+    font-weight:700;
+    color:#e27e0c;
+    margin-bottom:12px;
+    letter-spacing:.4px;
+
+}
+
+.home-dashboard-header p{
+
+    font-size:18px;
+    color:#fe9f08 !important;
+    font-weight:500;
+    letter-spacing:.3px;
+
+}
+
+/* ==========================
+   AUTHORIZATION MESSAGE
+========================== */
+
+.home-dashboard-message{
+
+    max-width:650px;
+    margin:0 auto 45px;
+    padding:16px 22px;
+    border-radius:14px;
+    background:#fee2e2;
+    color:#b91c1c;
+    border-left:6px solid #dc2626;
+    text-align:center;
+    font-size:15px;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(220,38,38,.10);
+    animation:showMessage .35s ease;
+
+}
+
+/* ==========================
+   MESSAGE ANIMATION
+========================== */
+
+@keyframes showMessage{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+}
+
+/* ==========================
+   DASHBOARD OPTIONS
+========================== */
+
+.home-dashboard-options{
+
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:40px;
+    flex-wrap:wrap;
+
+}
+
+/* ==========================
+   DASHBOARD CARD
+========================== */
+
+.home-dashboard-card{
+
+    width:360px;
+    min-height:320px;
+    position:relative;
+    overflow:hidden;
+    background:#ffffff;
+    border-radius:24px;
+    padding:40px 35px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid rgba(0,0,0,.06);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    transition:all .35s ease;
+
+}
+
+
+
+.home-dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(90deg,#d19c31,#f6cb63);
+
+}
+
+
+
+.home-dashboard-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    top:-90px;
+
+    right:-90px;
+
+    background:rgba(209,156,49,.08);
+
+    transition:.4s;
+
+}
+
+
+
+.home-dashboard-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 28px 55px rgba(147,127,11,.373);
+
+}
+
+
+
+.home-dashboard-card:hover::after{
+
+    transform:scale(1.2);
+
+}
+
+
+
+/* ==========================
+   ICON
+========================== */
+
+
+.home-dashboard-card svg{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 25px;
+
+    padding:18px;
+
+    border-radius:50%;
+
+    flex-shrink:0;
+
+    box-sizing:border-box;
+
+    transition:transform .35s ease;
+
+    z-index:2;
+
+}
+
+.home-dashboard-card:hover svg{
+
+    transform:scale(1.08);
+
+}
+/* ==========================
+   ADMIN CARD
+========================== */
+
+
+.admin-dashboard-card{
+
+    background:linear-gradient(180deg,#ffffff,#fffdf7);
+
+}
+
+
+.admin-dashboard-card::before{
+
+    background:linear-gradient(90deg,#d19c31,#f6cb63);
+
+}
+
+
+.admin-dashboard-card svg{
+
+    background:#fff4dd;
+
+    color:#c7932d;
+
+    box-shadow:0 12px 28px rgba(209,156,49,.25);
+
+}
+
+
+.admin-dashboard-card:hover{
+
+    background:#fffcf6;
+
+}
+
+
+
+/* ==========================
+   EMPLOYEE CARD
+========================== */
+
+
+.employee-dashboard-card{
+
+    background:linear-gradient(180deg,#ffffff,#f8fbff);
+
+}
+
+
+.employee-dashboard-card::before{
+
+    background:linear-gradient(90deg,#eb8125,#fac760);
+
+}
+
+
+.employee-dashboard-card::after{
+
+    background:rgba(37,99,235,.08);
+
+}
+
+
+.employee-dashboard-card svg{
+
+    background:#edf5ff;
+
+    color:#eb8125;
+
+    box-shadow:0 12px 28px rgba(235,133,37,.22);
+
+}
+
+
+.employee-dashboard-card:hover{
+
+    background:#fbfdff;
+
+}
+
+
+
+/* ==========================
+   CARD TITLE
+========================== */
+
+
+.home-dashboard-card h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#472310;
+
+    margin-bottom:18px;
+
+    z-index:2;
+
+}
+
+
+
+/* ==========================
+   CARD DESCRIPTION
+========================== */
+
+
+.home-dashboard-card p{
+
+    font-size:16px;
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    z-index:2;
+
+    max-width:250px;
+
+}
+
+
+
+/* ==========================
+   CARD BADGE
+========================== */
+
+
+.admin-dashboard-card .card-badge,
+.employee-dashboard-card .card-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.admin-dashboard-card .card-badge{
+
+    background:#fff4dd;
+
+    color:#b7791f;
+
+}
+
+
+
+.employee-dashboard-card .card-badge{
+
+    background:#e8f1ff;
+
+    color:#2563eb;
+
+}
+
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+
+@media (max-width:992px){
+
+
+.home-dashboard-container{
+
+    padding:135px 20px 50px;
+
+}
+
+
+.home-dashboard-header{
+
+    margin-bottom:45px;
+
+}
+
+
+.home-dashboard-header h1{
+
+    font-size:34px;
+
+}
+
+
+.home-dashboard-header p{
+
+    font-size:17px;
+
+}
+
+
+
+.home-dashboard-message{
+
+    max-width:550px;
+
+    font-size:15px;
+
+    padding:15px 20px;
+
+}
+
+
+
+.home-dashboard-options{
+
+    gap:30px;
+
+    justify-content:center;
+
+}
+
+
+
+.home-dashboard-card{
+
+    width:320px;
+
+    min-height:290px;
+
+    padding:35px 28px;
+
+}
+
+
+
+.home-dashboard-card svg{
+
+    width:82px;
+
+    height:82px;
+
+    padding:18px;
+
+}
+
+
+
+.home-dashboard-card h2{
+
+    font-size:26px;
+
+}
+
+
+
+.home-dashboard-card p{
+
+    font-size:15px;
+
+}
+
+
+}
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media (max-width:768px){
+
+
+.home-dashboard-container{
+
+    padding:120px 18px 40px;
+
+}
+
+
+.home-dashboard-header{
+
+    margin-bottom:35px;
+
+}
+
+
+.home-dashboard-header h1{
+
+    font-size:30px;
+
+}
+
+
+.home-dashboard-header p{
+
+    font-size:15px;
+
+}
+
+
+
+.home-dashboard-message{
+
+    width:100%;
+
+    max-width:100%;
+
+    font-size:14px;
+
+    padding:14px 18px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.home-dashboard-options{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.home-dashboard-card{
+
+    width:100%;
+
+    max-width:400px;
+
+    min-height:260px;
+
+    padding:30px 24px;
+
+}
+
+
+
+.home-dashboard-card svg{
+
+    width:72px;
+
+    height:72px;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.home-dashboard-card h2{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.home-dashboard-card p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+}
+
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+
+@media (max-width:480px){
+
+
+.home-dashboard-container{
+
+    padding:110px 15px 30px;
+
+}
+
+
+.home-dashboard-header{
+
+    margin-bottom:30px;
+
+}
+
+
+.home-dashboard-header h1{
+
+    font-size:26px;
+
+    line-height:1.3;
+
+}
+
+
+
+.home-dashboard-header p{
+
+    font-size:14px;
+
+}
+
+
+
+.home-dashboard-message{
+
+    font-size:13px;
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.home-dashboard-options{
+
+    gap:20px;
+
+}
+
+
+
+.home-dashboard-card{
+
+    width:100%;
+
+    border-radius:18px;
+
+    min-height:240px;
+
+    padding:25px 18px;
+
+}
+
+
+
+.home-dashboard-card svg{
+
+    width:65px;
+
+    height:65px;
+
+    padding:14px;
+
+    margin-bottom:16px;
+
+}
+
+
+
+.home-dashboard-card h2{
+
+    font-size:21px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.home-dashboard-card p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+}
+
+
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+
+@media (max-width:360px){
+
+
+.home-dashboard-container{
+
+    padding:105px 12px 25px;
+
+}
+
+
+
+.home-dashboard-header h1{
+
+    font-size:22px;
+
+}
+
+
+
+.home-dashboard-header p{
+
+    font-size:13px;
+
+}
+
+
+
+.home-dashboard-message{
+
+    font-size:12px;
+
+    padding:10px 12px;
+
+}
+
+
+
+.home-dashboard-card{
+
+    padding:20px 15px;
+
+}
+
+
+
+.home-dashboard-card svg{
+
+    width:58px;
+    height:58px;
+    padding:12px;
+
+}
+
+.home-dashboard-card h2{
+
+    font-size:18px;
+
+}
+
+.home-dashboard-card p{
+
+    font-size:13px;
+
+}
+}

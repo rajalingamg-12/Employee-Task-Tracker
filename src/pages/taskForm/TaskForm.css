@@ -1,0 +1,484 @@
+/* ==========================
+   PAGE
+========================== */
+
+.task-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#fff8f1,#ffedd5,#ffffff);
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+.task-container{
+    display:flex;
+    padding-top:70px;
+    margin-top: 30px;
+}
+
+.task-content{
+    flex:1;
+    margin-left:250px;
+    padding:35px;
+}
+
+.task-content h1{
+    font-size:32px;
+    font-weight:700;
+    color:#c2410c;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.task-form{
+    width:100%;
+    background:#ffffff;
+    border-radius:20px;
+    border:1px solid #fed7aa;
+    box-shadow:0 15px 35px rgba(249,115,22,.15);
+    padding:35px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px 30px;
+
+    animation:fadeIn .5s ease;
+}
+
+/* ==========================
+   FORM GROUP
+========================== */
+
+.task-form label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#7c2d12;
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea{
+
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #fdba74;
+    border-radius:10px;
+    background:#fffaf5;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+    color:#444;
+
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder{
+    color:#a8a29e;
+}
+
+.task-form input:focus,
+.task-form select:focus,
+.task-form textarea:focus{
+
+    border-color:#f97316;
+    background:#ffffff;
+    box-shadow:0 0 0 4px rgba(249,115,22,.15);
+
+}
+
+.task-form textarea{
+
+    min-height:150px;
+    resize:vertical;
+
+}
+
+/* ==========================
+   FULL WIDTH FIELDS
+========================== */
+
+.task-form textarea,
+.task-form button{
+    grid-column:1 / -1;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.task-form button{
+
+    margin-top:10px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#f97316,#ea580c);
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(249,115,22,.25);
+
+}
+
+.task-form button:hover{
+
+    background:linear-gradient(135deg,#ea580c,#c2410c);
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(249,115,22,.35);
+
+}
+
+.task-form button:active{
+    transform:scale(.98);
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* ==========================================
+   1600px and Above (Large Desktop)
+========================================== */
+
+@media (min-width:1600px){
+
+.task-content{
+    padding:45px;
+}
+
+.task-form{
+    max-width:1200px;
+    margin:auto;
+}
+
+}
+
+
+/* ==========================================
+   1400px - 1599px
+========================================== */
+
+@media (max-width:1599px){
+
+.task-content{
+    padding:35px;
+}
+
+.task-form{
+    max-width:1100px;
+    margin:auto;
+}
+
+}
+
+
+/* ==========================================
+   1200px - 1399px
+========================================== */
+
+@media (max-width:1399px){
+
+.task-content{
+    padding:30px;
+}
+
+.task-form{
+    gap:20px 24px;
+}
+
+}
+
+
+/* ==========================================
+   992px - 1199px
+========================================== */
+
+@media (max-width:1199px){
+
+.task-content{
+    margin-left:250px;
+    padding:25px;
+}
+
+.task-content h1{
+    font-size:30px;
+}
+
+.task-form{
+    padding:30px;
+    gap:18px 20px;
+}
+
+}
+
+
+/* ==========================================
+   Tablet (Below 992px)
+========================================== */
+
+@media (max-width:991px){
+
+.task-container{
+    display:block;
+}
+
+.task-content{
+
+    margin-left:0 !important;
+
+    width:100%;
+
+    padding:25px 20px;
+
+}
+
+.task-content h1{
+
+    text-align:center;
+
+    font-size:28px;
+
+}
+
+.task-form{
+
+    width:100%;
+
+    max-width:100%;
+
+    margin:auto;
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+    padding:25px;
+
+}
+
+.task-form textarea,
+.task-form button{
+
+    grid-column:auto;
+
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea{
+
+    font-size:15px;
+
+}
+
+.task-form textarea{
+
+    min-height:140px;
+
+}
+
+}
+
+
+/* ==========================================
+   Large Mobile
+========================================== */
+
+@media (max-width:767px){
+
+.task-content{
+
+    padding:20px 15px;
+
+}
+
+.task-content h1{
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+}
+
+.task-form{
+
+    padding:20px;
+
+    border-radius:16px;
+
+    gap:16px;
+
+}
+
+.task-form label{
+
+    font-size:14px;
+
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea{
+
+    padding:13px;
+
+    font-size:14px;
+
+}
+
+.task-form textarea{
+
+    min-height:130px;
+
+}
+
+.task-form button{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+}
+
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:575px){
+
+.task-content{
+
+    padding:15px;
+
+}
+
+.task-content h1{
+
+    font-size:22px;
+
+}
+
+.task-form{
+
+    padding:18px;
+
+    border-radius:14px;
+
+}
+
+.task-form label{
+
+    font-size:13px;
+
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea{
+
+    padding:12px;
+
+    font-size:13px;
+
+}
+
+.task-form textarea{
+
+    min-height:120px;
+
+}
+
+.task-form button{
+
+    font-size:14px;
+
+    padding:13px;
+
+}
+
+}
+
+
+/* ==========================================
+   Extra Small Mobile
+========================================== */
+
+@media (max-width:400px){
+
+.task-content{
+
+    padding:12px;
+
+}
+
+.task-content h1{
+
+    font-size:20px;
+
+}
+
+.task-form{
+
+    padding:15px;
+
+    border-radius:12px;
+
+    gap:14px;
+
+}
+
+.task-form label{
+
+    font-size:12px;
+
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea{
+
+    padding:11px;
+
+    font-size:12px;
+
+}
+
+.task-form textarea{
+
+    min-height:100px;
+
+}
+
+.task-form button{
+
+    font-size:13px;
+
+    padding:12px;
+
+}
+
+}

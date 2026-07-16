@@ -1,0 +1,210 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================================
+   DASHBOARD CARD
+========================================== */
+
+.dashboard-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:26px;
+
+    background:linear-gradient(180deg,#ffffff,#fffaf3);
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,183,77,.25);
+
+    box-shadow:0 15px 35px rgba(239,108,0,.10);
+
+    transition:all .35s ease;
+
+    cursor:pointer;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(239,108,0,.18);
+
+}
+
+.dashboard-card:hover::after{
+
+    transform:scale(1.25);
+
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.card-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#fff2dc,#ffe0b2);
+
+    color:#ef6c00;
+
+    font-size:32px;
+
+    flex-shrink:0;
+
+    box-shadow:0 12px 25px rgba(239,108,0,.18);
+
+    transition:.35s;
+
+    z-index:2;
+
+}
+
+.dashboard-card:hover .card-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.card-content{
+
+    flex:1;
+
+    z-index:2;
+
+}
+
+.card-content h3{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#92400e;
+
+    margin-bottom:10px;
+
+    letter-spacing:.3px;
+
+}
+
+.card-content h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#d97706;
+
+    line-height:1;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.dashboard-card{
+
+    padding:22px;
+
+    gap:18px;
+
+}
+
+.card-icon{
+
+    width:64px;
+
+    height:64px;
+
+    font-size:28px;
+
+}
+
+.card-content h3{
+
+    font-size:14px;
+
+}
+
+.card-content h1{
+
+    font-size:32px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.dashboard-card{
+
+    padding:18px;
+
+    gap:15px;
+
+    border-radius:18px;
+
+}
+
+.card-icon{
+
+    width:56px;
+
+    height:56px;
+
+    font-size:24px;
+
+    border-radius:16px;
+
+}
+
+.card-content h3{
+
+    font-size:13px;
+
+}
+
+.card-content h1{
+
+    font-size:28px;
+
+}
+
+}

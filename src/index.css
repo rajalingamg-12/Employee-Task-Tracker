@@ -1,13 +1,219 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ===========================
+   Google Font
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:#f8fafc;
+
+    color:#1e293b;
+
+    overflow-x:hidden;
+
+}
+
+
+#root{
+
+    min-height:100vh;
+
+}
+
+
+/* ===========================
+   Links
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ===========================
+   Lists
+=========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+/* ===========================
+   Images
+=========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+
+/* ===========================
+   Inputs
+=========================== */
+
+input,
+textarea,
+select{
+
+    font-family:inherit;
+
+    font-size:14px;
+
+}
+
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#e2e8f0;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+
+/* ===========================
+   Table Responsive
+=========================== */
+
+table{
+
+    width:100%;
+
+}
+
+
+/* ===========================
+   Animation
+=========================== */
+
+.fade{
+
+    animation:fade .4s ease;
+
+}
+
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    body{
+
+        font-size:14px;
+
+    }
+
 }
