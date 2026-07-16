@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 import { useAuth } from "../../context/AuthContext";
 
@@ -40,8 +40,7 @@ const EmployeeDashboard = () => {
 
     });
 
-    const loadTasks = async () => {
-
+    const loadTasks = useCallback(async () => {
         try {
 
             const response = await getMyTasks(user.email);
@@ -111,7 +110,7 @@ const EmployeeDashboard = () => {
 
         }
 
-    };
+    }, [user?.email]);
 
     useEffect(() => {
 
@@ -121,8 +120,9 @@ const EmployeeDashboard = () => {
 
         }
 
-    }, [user]);
-        return (
+    }, [user?.email, loadTasks]);
+
+    return (
 
         <div className="employee-home-page">
 
@@ -239,7 +239,7 @@ const EmployeeDashboard = () => {
                                                             className={`employee-task-status ${(task.status || "")
                                                                 .replace(/\s+/g, "")
                                                                 .toLowerCase()
-                                                            }`}
+                                                                }`}
 
                                                         >
 
