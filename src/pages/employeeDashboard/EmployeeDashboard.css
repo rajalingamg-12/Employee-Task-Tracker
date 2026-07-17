@@ -734,71 +734,70 @@
 }
 
 
-
 /* ==========================================
    TABLET
 ========================================== */
 
-@media (max-width:992px){
+@media (max-width:768px){
 
 .employee-home-content{
-
-    margin-left:80px;
-
-    padding:90px 25px 25px;
-
+    margin-left:0;
+    width:100%;
+    padding:85px 18px 20px;
 }
 
 .employee-welcome-section{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    text-align:left;
-
-    padding:25px;
-
+    padding:22px;
+    margin-bottom:25px;
 }
 
 .employee-welcome-section h1{
+    font-size:26px;
+}
 
-    font-size:30px;
-
+.employee-welcome-section p{
+    font-size:15px;
 }
 
 .employee-dashboard-cards{
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:22px;
-
+    grid-template-columns:1fr;
+    gap:18px;
 }
 
 .employee-recent-task-section{
+    padding:20px;
+    overflow-x:auto;
+}
 
-    padding:25px;
+.employee-recent-task-section h2{
+    font-size:24px;
+}
 
+.employee-task-table{
+    min-width:760px;
 }
 
 .employee-profile-card{
+    padding:22px;
+}
 
-    padding:25px;
-
+.employee-profile-card h2{
+    font-size:24px;
 }
 
 .employee-profile-details{
-
     grid-template-columns:1fr;
+}
 
+.employee-profile-details div{
+    padding:14px;
 }
 
 .employee-submit-btn{
-
     width:100%;
-
+    padding:15px;
+    font-size:15px;
 }
-
 }
 
 
@@ -820,7 +819,7 @@
 .employee-welcome-section{
 
     padding:22px;
-
+    margin-top: 100px;
     margin-bottom:25px;
 
 }
@@ -902,109 +901,74 @@
 @media (max-width:480px){
 
 .employee-home-content{
-
     margin-left:0;
-
+    width:100%;
     padding:80px 15px 18px;
-
 }
 
 .employee-welcome-section{
-
-    align-items:center;
-
     text-align:center;
-
+    align-items:center;
     padding:18px;
-
 }
 
 .employee-welcome-section h1{
-
     font-size:23px;
-
 }
 
 .employee-welcome-section p{
-
     font-size:14px;
-
 }
 
 .employee-dashboard-cards{
-
+    grid-template-columns:1fr;
     gap:15px;
-
 }
 
 .employee-recent-task-section{
-
     padding:16px;
-
     border-radius:18px;
-
+    overflow-x:auto;
 }
 
 .employee-recent-task-section h2{
-
     font-size:21px;
-
 }
 
 .employee-task-table{
-
     min-width:650px;
-
 }
 
 .employee-profile-card{
-
     padding:18px;
-
     border-radius:18px;
-
 }
 
 .employee-profile-card h2{
-
     font-size:21px;
-
 }
 
 .employee-profile-details{
-
+    grid-template-columns:1fr;
     gap:12px;
-
 }
 
 .employee-profile-details div{
-
     padding:12px;
-
     font-size:13px;
-
 }
 
 .employee-profile-details svg{
-
     width:34px;
-
     height:34px;
-
     padding:8px;
-
 }
 
 .employee-submit-btn{
-
     width:100%;
-
     padding:14px;
-
     font-size:14px;
-
 }
-
 }
 
 
@@ -1016,71 +980,46 @@
 @media (max-width:360px){
 
 .employee-home-content{
-
     padding:75px 12px 15px;
-
 }
 
 .employee-welcome-section{
-
     padding:15px;
-
 }
 
 .employee-welcome-section h1{
-
     font-size:20px;
-
 }
 
 .employee-welcome-section p{
-
     font-size:13px;
-
 }
 
 .employee-recent-task-section{
-
     padding:14px;
-
 }
 
 .employee-profile-card{
-
     padding:15px;
-
 }
 
 .employee-profile-card h2{
-
     font-size:18px;
-
 }
 
 .employee-profile-details div{
-
     font-size:12px;
-
     padding:10px;
-
 }
 
 .employee-profile-details svg{
-
     width:30px;
-
     height:30px;
-
     padding:7px;
-
 }
 
 .employee-submit-btn{
-
     font-size:13px;
-
     padding:12px;
-
 }
-
 }
