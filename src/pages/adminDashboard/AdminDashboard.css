@@ -582,83 +582,12 @@
 
 
 
-/* ===============================
-   SMALL MOBILE
-================================ */
 
-@media (max-width: 400px) {
-
-    .admin-dashboard-content {
-        margin-left: 0;
-        width: 100%;
-        padding: 12px;
-    }
-
-    .admin-dashboard-title {
-        font-size: 23px;
-        margin-left: 900px !important;
-        margin-top: 90px;
-    }
-
-    .admin-dashboard-subtitle {
-        font-size: 13px;
-    }
-
-    .admin-dashboard-refresh {
-        width: 100%;
-        margin: 15px 0 20px;
-        padding: 12px;
-        font-size: 13px;
-    }
-
-    .admin-profile-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
-        padding: 18px;
-        border-radius: 15px;
-    }
-
-    .admin-profile-icon {
-        width: 55px;
-        height: 55px;
-        padding: 14px;
-    }
-
-    .admin-profile-info h3 {
-        font-size: 18px;
-    }
-
-    .admin-profile-info p {
-        font-size: 12px;
-    }
-
-    .admin-dashboard-cards {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .admin-task-box {
-        padding: 15px;
-        border-radius: 15px;
-        overflow-x: auto;
-    }
-
-    .admin-task-header h2 {
-        font-size: 19px;
-    }
-
-    .admin-task-table {
-        min-width: 650px;
-    }
-
-}
 
 /* ===============================
    MOBILE RESPONSIVE
 ================================ */
+
 
 @media(max-width:600px){
 
@@ -688,6 +617,8 @@
 
 
 }
+
+
 
 .admin-dashboard-refresh{
 
@@ -768,6 +699,79 @@
     font-size:21px;
 
 }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+    .admin-dashboard-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 12px;
+    }
+
+    .admin-dashboard-title {
+        font-size: 23px;
+        margin-top: 90px;
+    }
+
+    .admin-dashboard-subtitle {
+        font-size: 13px;
+    }
+
+    .admin-dashboard-refresh {
+        width: 100%;
+        margin: 15px 0 20px;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .admin-profile-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .admin-profile-icon {
+        width: 55px;
+        height: 55px;
+        padding: 14px;
+    }
+
+    .admin-profile-info h3 {
+        font-size: 18px;
+    }
+
+    .admin-profile-info p {
+        font-size: 12px;
+    }
+
+    .admin-dashboard-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .admin-task-box {
+        padding: 15px;
+        border-radius: 15px;
+        overflow-x: auto;
+    }
+
+    .admin-task-header h2 {
+        font-size: 19px;
+    }
+
+    .admin-task-table {
+        min-width: 650px;
+    }
+
 }
 
 /* ===============================
